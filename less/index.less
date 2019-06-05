@@ -160,6 +160,11 @@ header {
 	}
 }
 
+.button:hover {
+	background-color: black;
+	color: white;
+	border: 0.5px solid white;
+}
 
 .about-boxes {
 	.centered-column();
@@ -224,7 +229,60 @@ header {
 	}
 }
 
+input[type=text], select, textarea {
+	background: white;
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #ccc; 
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 1.5rem;
+}
 
+input[type=submit] {
+	background-color: black;
+	color: white;
+	padding: 12px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 20%;
+}
+
+/* The animation code */
+@keyframes example {
+	from {background-color: black; color: white}
+	to {background-color: white; color: black}
+  }
+
+input[type=submit]:hover {
+	background-color: white;
+	color: black;
+	border: 0.5px solid black;
+	animation-name: example;
+	animation-duration: 4s;
+}
+
+.contact {
+	background-color: #E5E7E9;
+	padding: 20px;
+    border: 0.5px solid grey;
+	margin-bottom: 10px;
+	margin: 0 auto;
+}
+
+.fname, .lname, .subject {
+	padding-left: 3px;
+	font-size: 1.5rem;
+}
+
+.container form {
+	display: flex;
+	flex-direction: column;
+}
+
+#subject-area {
+	height: 100px;
+}
 
 footer {
 	width: 100%;

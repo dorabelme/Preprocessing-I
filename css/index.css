@@ -175,16 +175,49 @@ header nav a {
 .container {
   width: 100%;
   max-width: 876px;
-  border: 1px solid black;
-  padding: 15px;
   margin: 0 auto;
 }
+.about-img {
+  display: flex;
+  width: 300px;
+  height: auto;
+  align-self: flex-start;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+}
 .about-section {
-  background-color: grey;
+  background-color: #E5E7E9;
+  padding: 3rem;
 }
 .about-section h1 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+.about-section .intro-p {
+  width: 70%;
+  padding-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.about-section .button {
+  width: 100%;
+  height: auto;
+  border: 1.5px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 .about-section p {
   font-size: 1.6rem;

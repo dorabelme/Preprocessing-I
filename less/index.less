@@ -94,7 +94,7 @@ html, body {
 header {
 	width: @fullwidth;
 	max-width: @maxwidth;
-	margin: 30px auto 0 auto;
+	margin: 3rem auto 0 auto;
 	height: 50px;
 	background-color: @background-header;
 	.flexbox-row();
@@ -118,12 +118,21 @@ header {
 .container {
 	width: @fullwidth;
 	max-width: @maxwidth;
-	margin: 0 auto;
+	margin: auto;
+	padding-left: 1rem;
+		padding-right: 1rem;
+
+	@media (max-width: 500px) {
+		min-width: 400px;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
 }
 
 .about-section {
 	background-color: #E5E7E9;
 	padding: 3rem;
+
 
 	.about-img {
 		display: flex;
@@ -180,6 +189,11 @@ header {
 	flex-direction: row;
 	align-items: baseline;
 
+	@media (max-width: 500px) {
+		.centered-column();
+		margin-bottom: 2rem;
+	}
+
 	.about-container {
 		width: 48%;
 		padding-top: 2rem;
@@ -195,33 +209,34 @@ header {
 			padding-bottom: 3rem;
 		}
 	}
+	ul li {
+		font-size: 1.3rem;
+		line-height: 2rem;
+		list-style-type: square;
+		margin-left: 2rem;
+	}
 }
-
-
-.stuff {
-		display: flex;
-		align-items: flex-end;
-}
-
-ul li {
-	font-size: 1.3rem;
-	line-height: 2rem;
-	list-style-type: square;
-	margin-left: 2rem;
-}
-
 
 
 .table-section {
+
+	// @media (max-width: 500px) {
+	// 	padding-left: 2rem;
+	// 	padding-right: 2rem;
+	// }
+
+
 	h2 {
 		font-size: 2.2rem;
 		padding-bottom: 1.5rem;
 		padding-top: 1.5rem;
 	}
 
+
 	table {
 		border: 0.5px dashed grey;
 		width: 100%;
+		margin-bottom: 2rem;
 	}
 
 	th, td {
@@ -245,8 +260,11 @@ ul li {
 		text-decoration: none;
 		padding-bottom: 2rem;
 	}
-}
 
+	a:hover, a:active, a:visited, a:focus {
+    text-decoration: none;
+	}
+}
 
 .contact {
 	background-color: #E5E7E9;
@@ -308,6 +326,7 @@ footer {
 	background: black;
 	color: white;
 	text-align: center;
+	margin: 0 auto 3rem auto;
 
 	p {
 	font-size: 1.2rem;

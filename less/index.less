@@ -66,6 +66,17 @@ p {
 	font-family: 'Merriweather', serif;
 }
 
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+	font-family: 'Merriweather', serif;
+}
+
+@fullwidth: 100%;
+@maxwidth: 876px;
+@background-header: black;
+@decoration: none;
+
 .centered-column {
 	display: flex;
 	justify-content: space-between;
@@ -73,32 +84,29 @@ p {
 	flex-direction: column;
 }
 
-
-html, body {
-	height: 100%;
-	font-size: 62.5%;
-	font-family: 'Merriweather', serif;
+.flexbox-row {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
 }
 
+
 header {
-	width: 100%;
-	max-width: 876px;
+	width: @fullwidth;
+	max-width: @maxwidth;
 	margin: 30px auto 0 auto;
 	height: 50px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: black;
+	background-color: @background-header;
+	.flexbox-row();
 
 	nav {
 		display: flex;
-		width: 100%;
-		display: flex;
+		width: @fullwidth;
 		justify-content: flex-end;
 	}
 
 	nav a {
-		text-decoration: none;
+		text-decoration: @decoration;
 		color: white;
 		font-size: 1.5rem;
 		padding: 2rem;
@@ -108,22 +116,23 @@ header {
 
 
 .container {
-	width: 100%;
-	max-width: 876px;
+	width: @fullwidth;
+	max-width: @maxwidth;
 	margin: 0 auto;
 }
 
-.about-img {
-	display: flex;
-	width: 300px;
-	height: auto;
-	align-self: flex-start;
-	padding-bottom: 3rem;
-	padding-top: 5rem;
-}
 .about-section {
 	background-color: #E5E7E9;
 	padding: 3rem;
+
+	.about-img {
+		display: flex;
+		width: 300px;
+		height: auto;
+		align-self: flex-start;
+		padding-bottom: 3rem;
+		padding-top: 5rem;
+	}
 
 	h1 {
 		font-size: 3rem;
@@ -139,11 +148,10 @@ header {
 		padding-bottom: 1.5rem;
 		font-size: 1.4rem;
 		font-style: italic;
-
 	}
 
 	.button {
-		width: 100%;
+		width: @fullwidth;
 		height: auto;
 		border: 1.5px solid black;
 		padding-top: 1rem;
@@ -153,53 +161,53 @@ header {
 		font-size: 1.3rem;
 		font-weight: bold;
 		background-color: white;
-		text-decoration: none;
+		text-decoration: @decoration;
 		color:black;
 		margin-top: 1rem;
 		margin-bottom: 5rem;
 	}
+
+	.button:hover {
+		background-color: @background-header;
+		color: white;
+		border: 0.5px solid white;
+	}
 }
 
-.button:hover {
-	background-color: black;
-	color: white;
-	border: 0.5px solid white;
-}
 
 .about-boxes {
 	.centered-column();
 	flex-direction: row;
 	align-items: baseline;
+
+	.about-container {
+		width: 48%;
+		padding-top: 2rem;
+
+		h2 {
+			font-size: 2.2rem;
+			padding-bottom: 1.5rem;
+			padding-top: 1.5rem;
+		}
+
+		p {
+			font-size: 1.3rem;
+			padding-bottom: 3rem;
+		}
+	}
 }
 
-.about-container {
-	width: 48%;
-	padding-left: 3rem;
-	padding-top: 2rem;
 
-	h2 {
-		font-size: 2.2rem;
-		padding-bottom: 1.5rem;
-		padding-top: 1.5rem;
-	}
-
-	p {
-		font-size: 1.3rem;
-		padding-bottom: 3rem;
-
-	}
-
-	ul li {
-		font-size: 1.3rem;
-		line-height: 2rem;
-		list-style-type: square;
-		margin-left: 2rem;
-	}
-
-	.stuff {
+.stuff {
 		display: flex;
 		align-items: flex-end;
-	}
+}
+
+ul li {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	list-style-type: square;
+	margin-left: 2rem;
 }
 
 
@@ -227,40 +235,18 @@ header {
 	th {
 		font-weight: bold;
 	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	a {
+		font-size: 1.5rem;
+		text-decoration: none;
+		padding-bottom: 2rem;
+	}
 }
 
-input[type=text], select, textarea {
-	background: white;
-	width: 100%;
-	padding: 1rem;
-	border: 1px solid #ccc; 
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 1.5rem;
-}
-
-input[type=submit] {
-	background-color: black;
-	color: white;
-	padding: 12px 20px;
-	border-radius: 4px;
-	cursor: pointer;
-	width: 20%;
-}
-
-/* The animation code */
-@keyframes example {
-	from {background-color: black; color: white}
-	to {background-color: white; color: black}
-  }
-
-input[type=submit]:hover {
-	background-color: white;
-	color: black;
-	border: 0.5px solid black;
-	animation-name: example;
-	animation-duration: 4s;
-}
 
 .contact {
 	background-color: #E5E7E9;
@@ -268,20 +254,53 @@ input[type=submit]:hover {
     border: 0.5px solid grey;
 	margin-bottom: 10px;
 	margin: 0 auto;
-}
 
-.fname, .lname, .subject {
-	padding-left: 3px;
-	font-size: 1.5rem;
-}
+	input[type=text], select, textarea {
+		background: white;
+		width: 100%;
+		padding: 1rem;
+		border: 1px solid #ccc; 
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 1.5rem;
+	}
 
-.container form {
-	display: flex;
-	flex-direction: column;
-}
+	input[type=submit] {
+		background-color: black;
+		color: white;
+		padding: 12px 20px;
+		border-radius: 4px;
+		cursor: pointer;
+		width: 20%;
+	}
 
-#subject-area {
-	height: 100px;
+	/* The animation code */
+	@keyframes example {
+		from {background-color: black; color: white}
+		to {background-color: white; color: black}
+  }
+
+	input[type=submit]:hover {
+		background-color: white;
+		color: black;
+		border: 0.5px solid black;
+		animation-name: example;
+		animation-duration: 4s;
+	}
+
+	.fname, .lname, .subject {
+		padding-left: 3px;
+		font-size: 1.5rem;
+	}
+
+	.container form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#subject-area {
+		height: 100px;
+	}
 }
 
 footer {

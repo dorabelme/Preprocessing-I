@@ -139,31 +139,36 @@ p {
   font-size: 1.6rem;
   font-family: 'Merriweather', serif;
 }
-.centered-column {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
 html,
 body {
   height: 100%;
   font-size: 62.5%;
   font-family: 'Merriweather', serif;
 }
+.centered-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.flexbox-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 header {
   width: 100%;
   max-width: 876px;
   margin: 30px auto 0 auto;
   height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   background-color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 header nav {
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: flex-end;
 }
 header nav a {
@@ -178,17 +183,17 @@ header nav a {
   max-width: 876px;
   margin: 0 auto;
 }
-.about-img {
+.about-section {
+  background-color: #E5E7E9;
+  padding: 3rem;
+}
+.about-section .about-img {
   display: flex;
   width: 300px;
   height: auto;
   align-self: flex-start;
   padding-bottom: 3rem;
   padding-top: 5rem;
-}
-.about-section {
-  background-color: #E5E7E9;
-  padding: 3rem;
 }
 .about-section h1 {
   font-size: 3rem;
@@ -219,7 +224,7 @@ header nav a {
   margin-top: 1rem;
   margin-bottom: 5rem;
 }
-.button:hover {
+.about-section .button:hover {
   background-color: black;
   color: white;
   border: 0.5px solid white;
@@ -232,29 +237,28 @@ header nav a {
   flex-direction: row;
   align-items: baseline;
 }
-.about-container {
+.about-boxes .about-container {
   width: 48%;
-  padding-left: 3rem;
   padding-top: 2rem;
 }
-.about-container h2 {
+.about-boxes .about-container h2 {
   font-size: 2.2rem;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
-.about-container p {
+.about-boxes .about-container p {
   font-size: 1.3rem;
   padding-bottom: 3rem;
 }
-.about-container ul li {
+.stuff {
+  display: flex;
+  align-items: flex-end;
+}
+ul li {
   font-size: 1.3rem;
   line-height: 2rem;
   list-style-type: square;
   margin-left: 2rem;
-}
-.about-container .stuff {
-  display: flex;
-  align-items: flex-end;
 }
 .table-section h2 {
   font-size: 2.2rem;
@@ -276,9 +280,25 @@ header nav a {
 .table-section th {
   font-weight: bold;
 }
-input[type=text],
-select,
-textarea {
+.table-section p {
+  font-size: 1.5rem;
+}
+.table-section a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding-bottom: 2rem;
+}
+.contact {
+  background-color: #E5E7E9;
+  padding: 20px;
+  border: 0.5px solid grey;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  /* The animation code */
+}
+.contact input[type=text],
+.contact select,
+.contact textarea {
   background: white;
   width: 100%;
   padding: 1rem;
@@ -287,7 +307,7 @@ textarea {
   margin-top: 6px;
   margin-bottom: 1.5rem;
 }
-input[type=submit] {
+.contact input[type=submit] {
   background-color: black;
   color: white;
   padding: 12px 20px;
@@ -295,7 +315,6 @@ input[type=submit] {
   cursor: pointer;
   width: 20%;
 }
-/* The animation code */
 @keyframes example {
   from {
     background-color: black;
@@ -306,31 +325,24 @@ input[type=submit] {
     color: black;
   }
 }
-input[type=submit]:hover {
+.contact input[type=submit]:hover {
   background-color: white;
   color: black;
   border: 0.5px solid black;
   animation-name: example;
   animation-duration: 4s;
 }
-.contact {
-  background-color: #E5E7E9;
-  padding: 20px;
-  border: 0.5px solid grey;
-  margin-bottom: 10px;
-  margin: 0 auto;
-}
-.fname,
-.lname,
-.subject {
+.contact .fname,
+.contact .lname,
+.contact .subject {
   padding-left: 3px;
   font-size: 1.5rem;
 }
-.container form {
+.contact .container form {
   display: flex;
   flex-direction: column;
 }
-#subject-area {
+.contact #subject-area {
   height: 100px;
 }
 footer {

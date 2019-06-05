@@ -182,8 +182,6 @@ header nav a {
   width: 100%;
   max-width: 876px;
   margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 @media (max-width: 500px) {
   .container {

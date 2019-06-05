@@ -132,15 +132,16 @@ table {
 }
 h1,
 h2 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 p {
   line-height: 1.4;
   font-size: 1.6rem;
+  font-family: 'Merriweather', serif;
 }
 .centered-column {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -148,7 +149,7 @@ html,
 body {
   height: 100%;
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 header {
   width: 100%;
@@ -190,8 +191,7 @@ header nav a {
   padding: 3rem;
 }
 .about-section h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
 }
 .about-section p {
   margin-bottom: 3rem;
@@ -219,8 +219,57 @@ header nav a {
   margin-top: 1rem;
   margin-bottom: 5rem;
 }
-.about-section p {
-  font-size: 1.6rem;
+.about-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  align-items: baseline;
+}
+.about-container {
+  width: 48%;
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+.about-container h2 {
+  font-size: 2.2rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+.about-container p {
+  font-size: 1.3rem;
+  padding-bottom: 3rem;
+}
+.about-container ul li {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  list-style-type: square;
+  margin-left: 2rem;
+}
+.about-container .stuff {
+  display: flex;
+  align-items: flex-end;
+}
+.table-section h2 {
+  font-size: 2.2rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+.table-section table {
+  border: 0.5px dashed grey;
+  width: 100%;
+}
+.table-section th,
+.table-section td {
+  border: 0.5px dashed grey;
+  font-size: 1.5rem;
+  height: 5rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+.table-section th {
+  font-weight: bold;
 }
 footer {
   width: 100%;

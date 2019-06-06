@@ -178,6 +178,11 @@ header nav a {
   padding: 2rem;
   padding-bottom: 2.5rem;
 }
+header nav a:hover {
+  background-color: white;
+  color: black;
+  border: 0.5px solid black;
+}
 .container {
   width: 100%;
   max-width: 876px;
@@ -306,6 +311,7 @@ header nav a {
 .table-section a:visited,
 .table-section a:focus {
   text-decoration: none;
+  color: black;
 }
 .portfolio {
   width: 100%;
@@ -322,6 +328,7 @@ header nav a {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    text-align: center;
   }
 }
 .portfolio .portfolio-boxes {

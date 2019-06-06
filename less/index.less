@@ -75,7 +75,11 @@ html, body {
 @fullwidth: 100%;
 @maxwidth: 876px;
 @background-header: black;
+@background: white;
 @decoration: none;
+@height: 50px;
+@header: 2.2rem;
+@padding: 1.5rem;
 
 .centered-column {
 	display: flex;
@@ -95,7 +99,7 @@ header {
 	width: @fullwidth;
 	max-width: @maxwidth;
 	margin: 3rem auto 0 auto;
-	height: 50px;
+	height: @height;
 	background-color: @background-header;
 	.flexbox-row();
 
@@ -107,10 +111,15 @@ header {
 
 	nav a {
 		text-decoration: @decoration;
-		color: white;
+		color:@background;
 		font-size: 1.5rem;
 		padding: 2rem;
 		padding-bottom: 2.5rem;
+	}
+	nav a:hover {
+		background-color: @background;
+		color:@background-header;
+		border: 0.5px solid black;
 	}
 }
 
@@ -147,12 +156,12 @@ header {
 
 	p {
 		margin-bottom: 3rem;
-		margin-top: 1.5rem;
+		margin-top: @padding;
 	}
 
 	.intro-p {
 		width: 70%;
-		padding-bottom: 1.5rem;
+		padding-bottom: @padding;
 		font-size: 1.4rem;
 		font-style: italic;
 	}
@@ -167,20 +176,19 @@ header {
 		padding-right: 3rem;
 		font-size: 1.3rem;
 		font-weight: bold;
-		background-color: white;
+		background-color: @background;
 		text-decoration: @decoration;
-		color:black;
+		color: @background-header;
 		margin-top: 1rem;
 		margin-bottom: 5rem;
 	}
 
 	.button:hover {
 		background-color: @background-header;
-		color: white;
+		color: @background;
 		border: 0.5px solid white;
 	}
 }
-
 
 .about-boxes {
 	.centered-column();
@@ -197,9 +205,9 @@ header {
 		padding-top: 2rem;
 
 		h2 {
-			font-size: 2.2rem;
-			padding-bottom: 1.5rem;
-			padding-top: 1.5rem;
+			font-size: @header;
+			padding-bottom: @padding;
+			padding-top: @padding;
 		}
 
 		p {
@@ -218,9 +226,9 @@ header {
 
 .table-section {
 	h2 {
-		font-size: 2.2rem;
-		padding-bottom: 1.5rem;
-		padding-top: 1.5rem;
+		font-size: @header;
+		padding-bottom: @padding;
+		padding-top: @padding;
 	}
 
 
@@ -253,7 +261,8 @@ header {
 	}
 
 	a:hover, a:active, a:visited, a:focus {
-    text-decoration: none;
+		text-decoration: none;
+		color: black;
 	}
 }
 
@@ -266,6 +275,7 @@ header {
 
 	@media (max-width: 500px) {
 		.centered-column();
+		text-align: center;
 	}
 
 	.portfolio-boxes {
@@ -300,16 +310,16 @@ header {
 		padding: 1rem 3rem;
 		font-size: 1.3rem;
 		font-weight: bold;
-		background-color: white;
+		background-color:@background;
 		text-decoration: @decoration;
-		color:black;
+		color: @background-header;
 		margin-top: 1rem;
 		text-align: center;
 	}
 
 	a:hover {
 		background-color: @background-header;
-		color: white;
+		color:@background;
 		border: 0.5px solid white;
 	}
 }
@@ -317,23 +327,23 @@ header {
 .contact {
 	background-color: #E5E7E9;
 	padding: 20px;
-    border: 0.5px solid grey;
+  border: 0.5px solid grey;
 	margin-bottom: 10px;
 	margin: 0 auto;
 
 	input[type=text], select, textarea {
-		background: white;
+		background:@background;
 		width: 100%;
 		padding: 1rem;
 		border: 1px solid #ccc; 
 		box-sizing: border-box;
 		margin-top: 6px;
-		margin-bottom: 1.5rem;
+		margin-bottom: @padding;
 	}
 
 	input[type=submit] {
-		background-color: black;
-		color: white;
+		background-color: @background-header;
+		color:@background;
 		padding: 12px 20px;
 		border-radius: 4px;
 		cursor: pointer;
@@ -347,8 +357,8 @@ header {
   }
 
 	input[type=submit]:hover {
-		background-color: white;
-		color: black;
+		background-color: @background;
+		color: @background-header;
 		border: 0.5px solid black;
 		animation-name: example;
 		animation-duration: 4s;
@@ -371,7 +381,7 @@ header {
 
 footer {
 	width: 100%;
-	background: black;
+	background: @background-header;
 	color: white;
 	text-align: center;
 	margin: 0 auto 3rem auto;

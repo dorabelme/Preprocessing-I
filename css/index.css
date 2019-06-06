@@ -1,1 +1,443 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+h1,
+h2 {
+  font-family: 'Merriweather', serif;
+}
+p {
+  line-height: 1.4;
+  font-size: 1.6rem;
+  font-family: 'Merriweather', serif;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: 'Merriweather', serif;
+}
+.centered-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.flexbox-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header {
+  width: 100%;
+  max-width: 876px;
+  margin: 3rem auto 0 auto;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+}
+header nav a:hover {
+  background-color: white;
+  color: black;
+  border: 0.5px solid black;
+}
+.container {
+  width: 100%;
+  max-width: 876px;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  .container {
+    min-width: 400px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+.about-section {
+  background-color: #E5E7E9;
+  padding: 3rem;
+}
+.about-section .about-img {
+  display: flex;
+  width: 300px;
+  height: auto;
+  align-self: flex-start;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+}
+.about-section h1 {
+  font-size: 3rem;
+}
+.about-section p {
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+.about-section .intro-p {
+  width: 70%;
+  padding-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.about-section .button {
+  width: 100%;
+  height: auto;
+  border: 1.5px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.about-section .button:hover {
+  background-color: black;
+  color: white;
+  border: 0.5px solid white;
+}
+.about-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  align-items: baseline;
+}
+@media (max-width: 500px) {
+  .about-boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+}
+.about-boxes .about-container {
+  width: 48%;
+  padding-top: 2rem;
+}
+.about-boxes .about-container h2 {
+  font-size: 2.2rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+.about-boxes .about-container p {
+  font-size: 1.3rem;
+  padding-bottom: 3rem;
+}
+.about-boxes ul li {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  list-style-type: square;
+  margin-left: 2rem;
+}
+.table-section h2 {
+  font-size: 2.2rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+.table-section table {
+  border: 0.5px dashed grey;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.table-section th,
+.table-section td {
+  border: 0.5px dashed grey;
+  font-size: 1.5rem;
+  height: 5rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+.table-section th {
+  font-weight: bold;
+}
+.table-section p {
+  font-size: 1.5rem;
+}
+.table-section a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding-bottom: 2rem;
+}
+.table-section a:hover,
+.table-section a:active,
+.table-section a:visited,
+.table-section a:focus {
+  text-decoration: none;
+  color: black;
+}
+.portfolio {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
+}
+@media (max-width: 500px) {
+  .portfolio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.portfolio .portfolio-boxes {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  vertical-align: center;
+}
+.portfolio .portfolio-image {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+.portfolio .image2 {
+  margin-top: 2rem;
+}
+.portfolio h2 {
+  font-size: 2rem;
+}
+.portfolio p {
+  margin-bottom: 2rem;
+}
+.portfolio .bakery-p {
+  margin-bottom: 0;
+}
+.portfolio a {
+  width: 150px;
+  height: auto;
+  border: 1.5px solid black;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  text-align: center;
+}
+.portfolio a:hover {
+  background-color: black;
+  color: white;
+  border: 0.5px solid white;
+}
+.contact {
+  background-color: #E5E7E9;
+  padding: 20px;
+  border: 0.5px solid grey;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  /* The animation code */
+}
+.contact input[type=text],
+.contact select,
+.contact textarea {
+  background: white;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 1.5rem;
+}
+.contact input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 20%;
+}
+@keyframes example {
+  from {
+    background-color: black;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: black;
+  }
+}
+.contact input[type=submit]:hover {
+  background-color: white;
+  color: black;
+  border: 0.5px solid black;
+  animation-name: example;
+  animation-duration: 4s;
+}
+.contact .fname,
+.contact .lname,
+.contact .subject {
+  padding-left: 3px;
+  font-size: 1.5rem;
+}
+.contact .container form {
+  display: flex;
+  flex-direction: column;
+}
+.contact #subject-area {
+  height: 100px;
+}
+footer {
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+}
+footer p {
+  font-size: 1.2rem;
+  padding: 1rem;
+}

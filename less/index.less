@@ -1,3 +1,6 @@
+
+
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -53,7 +56,338 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+h1, h2 {
+	font-family: 'Merriweather', serif;
 }
 
+p {
+	line-height: 1.4;
+	font-size: 1.6rem;
+	font-family: 'Merriweather', serif;
+}
+
+html, body {
+	height: 100%;
+	font-size: 62.5%;
+	font-family: 'Merriweather', serif;
+}
+
+@fullwidth: 100%;
+@maxwidth: 876px;
+@background-header: black;
+@background: white;
+@decoration: none;
+@height: 50px;
+@header: 2.2rem;
+@padding: 1.5rem;
+
+.centered-column {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+
+.flexbox-row {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+
+header {
+	width: @fullwidth;
+	max-width: @maxwidth;
+	margin: 3rem auto 0 auto;
+	height: @height;
+	background-color: @background-header;
+	.flexbox-row();
+
+	nav {
+		display: flex;
+		width: @fullwidth;
+		justify-content: flex-end;
+	}
+
+	nav a {
+		text-decoration: @decoration;
+		color:@background;
+		font-size: 1.5rem;
+		padding: 2rem;
+		padding-bottom: 2.5rem;
+	}
+	nav a:hover {
+		background-color: @background;
+		color:@background-header;
+		border: 0.5px solid black;
+	}
+}
+
+
+.container {
+	width: @fullwidth;
+	max-width: @maxwidth;
+	margin: auto;
+	
+	@media (max-width: 500px) {
+		min-width: 400px;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
+
+.about-section {
+	background-color: #E5E7E9;
+	padding: 3rem;
+
+
+	.about-img {
+		display: flex;
+		width: 300px;
+		height: auto;
+		align-self: flex-start;
+		padding-bottom: 3rem;
+		padding-top: 5rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	p {
+		margin-bottom: 3rem;
+		margin-top: @padding;
+	}
+
+	.intro-p {
+		width: 70%;
+		padding-bottom: @padding;
+		font-size: 1.4rem;
+		font-style: italic;
+	}
+
+	.button {
+		width: @fullwidth;
+		height: auto;
+		border: 1.5px solid black;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		font-size: 1.3rem;
+		font-weight: bold;
+		background-color: @background;
+		text-decoration: @decoration;
+		color: @background-header;
+		margin-top: 1rem;
+		margin-bottom: 5rem;
+	}
+
+	.button:hover {
+		background-color: @background-header;
+		color: @background;
+		border: 0.5px solid white;
+	}
+}
+
+.about-boxes {
+	.centered-column();
+	flex-direction: row;
+	align-items: baseline;
+
+	@media (max-width: 500px) {
+		.centered-column();
+		margin-bottom: 2rem;
+	}
+
+	.about-container {
+		width: 48%;
+		padding-top: 2rem;
+
+		h2 {
+			font-size: @header;
+			padding-bottom: @padding;
+			padding-top: @padding;
+		}
+
+		p {
+			font-size: 1.3rem;
+			padding-bottom: 3rem;
+		}
+	}
+	ul li {
+		font-size: 1.3rem;
+		line-height: 2rem;
+		list-style-type: square;
+		margin-left: 2rem;
+	}
+}
+
+
+.table-section {
+	h2 {
+		font-size: @header;
+		padding-bottom: @padding;
+		padding-top: @padding;
+	}
+
+
+	table {
+		border: 0.5px dashed grey;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	th, td {
+		border: 0.5px dashed grey;
+		font-size: 1.5rem;
+		height: 5rem;
+		text-align: center;
+		padding-top: 2rem;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	a {
+		font-size: 1.5rem;
+		text-decoration: none;
+		padding-bottom: 2rem;
+	}
+
+	a:hover, a:active, a:visited, a:focus {
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.portfolio {
+	width: @fullwidth;
+	flex-wrap: wrap;
+	.flexbox-row();
+	justify-content: space-evenly;
+	margin-bottom: 5rem;
+
+	@media (max-width: 500px) {
+		.centered-column();
+		text-align: center;
+	}
+
+	.portfolio-boxes {
+		width: 48%;
+		.centered-column();
+		vertical-align: center;
+	}
+	.portfolio-image {
+		width: 300px;
+		margin-bottom: 1rem;
+	}
+
+	.image2 {
+		margin-top: 2rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		margin-bottom: 2rem;
+	}
+
+	.bakery-p {
+		margin-bottom: 0;
+	}
+
+	a {
+		width: 150px;
+		height: auto;
+		border: 1.5px solid black;
+		padding: 1rem 3rem;
+		font-size: 1.3rem;
+		font-weight: bold;
+		background-color:@background;
+		text-decoration: @decoration;
+		color: @background-header;
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	a:hover {
+		background-color: @background-header;
+		color:@background;
+		border: 0.5px solid white;
+	}
+}
+
+.contact {
+	background-color: #E5E7E9;
+	padding: 20px;
+  border: 0.5px solid grey;
+	margin-bottom: 10px;
+	margin: 0 auto;
+
+	input[type=text], select, textarea {
+		background:@background;
+		width: 100%;
+		padding: 1rem;
+		border: 1px solid #ccc; 
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: @padding;
+	}
+
+	input[type=submit] {
+		background-color: @background-header;
+		color:@background;
+		padding: 12px 20px;
+		border-radius: 4px;
+		cursor: pointer;
+		width: 20%;
+	}
+
+	/* The animation code */
+	@keyframes example {
+		from {background-color: black; color: white}
+		to {background-color: white; color: black}
+  }
+
+	input[type=submit]:hover {
+		background-color: @background;
+		color: @background-header;
+		border: 0.5px solid black;
+		animation-name: example;
+		animation-duration: 4s;
+	}
+
+	.fname, .lname, .subject {
+		padding-left: 3px;
+		font-size: 1.5rem;
+	}
+
+	.container form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#subject-area {
+		height: 100px;
+	}
+}
+
+footer {
+	width: 100%;
+	background: @background-header;
+	color: white;
+	text-align: center;
+	margin: 0 auto 3rem auto;
+
+	p {
+	font-size: 1.2rem;
+	padding: 1rem;
+	}
+}

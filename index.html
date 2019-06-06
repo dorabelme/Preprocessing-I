@@ -1,12 +1,17 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
-  <title>My Resume</title>
+  <title>Dora Belme Resume</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
+
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +19,148 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <main class="container">
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="https://dorabelme.github.io/portfolio-website/index.html">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container about-page">
+      <section class="about-section">
+        <img class="about-img" src="images/about-img1.jpg" alt="portrait of Dora">
+        <h1>Dora Belme - Web Development</h1>
+        <p class="intro-p">I enjoy creating web applications that are functional and aesthetic.</p>
+        <p>I'm currently a student at Lambda School. If you're interested in what I'm working on, check out my
+          portfolio.</p>
+        <a class="button" href="https://dorabelme.github.io/portfolio-website/index.html">Projects</a>
+      </section>
+
+
+      <section class="about-boxes" id="about">
+        <div class="about-container">
+          <h2>My Story</h2>
+          <p>I’m a cross-disciplinary, ‘out-of-the-box’ thinker. I love everything related to the arts and startups.
+            I enjoy building products that are functional and aesthetic. There is beauty in clean and efficient code.
+            I am happy to walk the extra mile and spend extra time and energy on projects to make them outstanding.
+            Pushing and performing above expactations is something I learned from sports. I'm highly detail-oriented
+            and I value working in teams that are motivated and optimistic.
+            </detail-oriented>
+          </p>
+        </div>
+
+        <div class="about-container">
+          <h2>Stuff I'm Good At:</h2>
+          <ul>
+            <li>Writing clean code</li>
+            <li>Using LESS</li>
+            <li>Thinking ahead in implementation</li>
+            <li>Coding up UI</li>
+            <li>Aesthetics</li>
+            <li>Creating Pixel Perfect designs</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="table-section">
+        <h2>Projects and Experience</h2>
+        <table style="width:100%">
+          <tr>
+            <th>Tech</th>
+            <th>Months</th>
+            <th>Projects</th>
+          </tr>
+          <tr>
+            <td>HTML, CSS, Less</td>
+            <td>1</td>
+            <td>Great Idea Project, Sprint Challenge, Portfolio Website </td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>8</td>
+            <td>Web Scraping Project, Data Visualization, Regex</td>
+          </tr>
+          <tr>
+            <td>SQL</td>
+            <td>3</td>
+            <td>Basic Queries</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="portfolio">
+        <div class="portfolio-boxes">
+          <img class="portfolio-image" src="images/responsive-design.jpg" alt="iMac and MacBook">
+          <h2>Great Idea</h2>
+          <p>This is a project about Responsive Web Design and media queries.</p>
+          <a href="https://github.com/dorabelme/responsive-web-design-I" class="button">View Code</a>
+        </div>
+
+        <div class="portfolio-boxes">
+          <img class="portfolio-image" src="images/sprint.jpg" alt="10mm sprint field">
+          <h2>Sprint Challenge</h2>
+          <p>This project is about User Interface, Semantic HTML, CSS Fundamentals, CSS Flexbox, and
+            Git.</p>
+          <a href="https://github.com/dorabelme/UI-III-Flexbox" class="button">View Code</a>
+        </div>
+
+        <div class="portfolio-boxes">
+          <br>
+          <br>
+          <img class="portfolio-image image2" src="images/flexbox.jpg" alt="office table from above">
+          <h2>Flexbox</h2>
+          <p>This project is about using Flexbox in CSS.</p>
+
+          <a href="https://github.com/dorabelme/UI-III-Flexbox" class="button">View Code</a>
+
+        </div>
+
+        <div class="portfolio-boxes">
+          <br>
+          <br>
+          <img class="portfolio-image image2" src="images/bakery.jpg" alt="Bakery Counter">
+          <h2>Sweet East Bakery</h2>
+          <p class="bakery-p">This is a project about HTML semantic tags, CSS selectors, properties, and inheritance.
+          </p>
+          <a href="https://github.com/dorabelme/UI-III-Flexbox" class="button">View Code</a>
+        </div>
+      </section>
+
+
+      <section class="table-section" id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions, feel free to reach out:</p>
+        <a id="mail" href="mailto:contact.dorabelme@gmail.com">contact.dorabelme@gmail.com</a>
+        <br>
+        <br><br>
+      </section>
+      <div class="contact">
+        <form action="action_page.php">
+
+          <label class="fname">First Name</label>
+          <input type="text" placeholder="Your name...">
+
+          <label class="lname">Last Name</label>
+          <input type="text" placeholder="Your last name...">
+          </select>
+
+          <label class="subject">Subject</label>
+          <textarea id="subject-area" placeholder="Write something here..."></textarea>
+
+          <input type="submit" value="Submit">
+
+        </form>
+      </div>
+      </section>
+      <footer>
+        <p>Copyright Dora Belme 2019</p>
+      </footer>
+    </div>
+  </main>
 </body>
+
 </html>

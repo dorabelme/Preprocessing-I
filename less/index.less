@@ -217,13 +217,6 @@ header {
 
 
 .table-section {
-
-	// @media (max-width: 500px) {
-	// 	padding-left: 2rem;
-	// 	padding-right: 2rem;
-	// }
-
-
 	h2 {
 		font-size: 2.2rem;
 		padding-bottom: 1.5rem;
@@ -261,6 +254,63 @@ header {
 
 	a:hover, a:active, a:visited, a:focus {
     text-decoration: none;
+	}
+}
+
+.portfolio {
+	width: @fullwidth;
+	flex-wrap: wrap;
+	.flexbox-row();
+	justify-content: space-evenly;
+	margin-bottom: 5rem;
+
+	@media (max-width: 500px) {
+		.centered-column();
+	}
+
+	.portfolio-boxes {
+		width: 48%;
+		.centered-column();
+		vertical-align: center;
+	}
+	.portfolio-image {
+		width: 300px;
+		margin-bottom: 1rem;
+	}
+
+	.image2 {
+		margin-top: 2rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		margin-bottom: 2rem;
+	}
+
+	.bakery-p {
+		margin-bottom: 0;
+	}
+
+	a {
+		width: 150px;
+		height: auto;
+		border: 1.5px solid black;
+		padding: 1rem 3rem;
+		font-size: 1.3rem;
+		font-weight: bold;
+		background-color: white;
+		text-decoration: @decoration;
+		color:black;
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	a:hover {
+		background-color: @background-header;
+		color: white;
+		border: 0.5px solid white;
 	}
 }
 
